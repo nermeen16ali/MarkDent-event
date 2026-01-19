@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
     --body-bg: linear-gradient(164.65deg, #212D5A 3.6%, #0E0E29 51.5%);
@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     background: var(--body-bg);
     background-attachment: fixed;
     color: var(--white);
@@ -26,7 +26,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 430px; /* iPhone 14 Pro Max width */
+    max-width: 430px;
     margin: 0 auto;
     padding: 20px;
     min-height: 100vh;
@@ -51,15 +51,13 @@ body {
 }
 
 .splash-title {
-    font-size: 32px;
+    font-size: 29.09px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .splash-subtitle {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.5;
+    font-size: 14px;
 }
 
 /* Header Styles */
@@ -147,13 +145,15 @@ body {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px;
+    background-image: url(../images/upcoming-bg.png);
+    background-size: cover;
+    border: 1px solid #A8ACC4;
+    padding: 16px;
 }
 
 .banner-img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
     display: block;
 }
 
@@ -208,7 +208,7 @@ body {
     left: 0;
     right: 0;
     padding: 10px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
 }
 
 .event-date-badge {
