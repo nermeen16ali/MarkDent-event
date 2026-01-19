@@ -6,7 +6,10 @@
     --old-events-bg: rgba(255, 255, 255, 0.1);
     --white: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.7);
-    --primary-red: #E31E24;
+    --secondary-950: #A92629;
+    --primary-red: #FF3B30;
+    --primary-200: #D3D6E2;
+    --primary-100: #E9EAF0;
 }
 
 * {
@@ -65,7 +68,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 18px 0;
 }
 
 .header .logo-img {
@@ -76,10 +79,11 @@ body {
 .section-title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 20px;
     font-weight: 600;
-    margin: 20px 0;
+    letter-spacing: -0.4px;
+    margin-bottom: 18px;
 }
 
 .section-title img {
@@ -90,17 +94,17 @@ body {
 .categories-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 8px;
 }
 
 .category-card {
     background: var(--card-gradient);
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 18px;
+    padding: 12px 13.25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     text-decoration: none;
     color: var(--white);
     transition: transform 0.2s;
@@ -126,53 +130,111 @@ body {
 }
 
 .category-name-wrapper {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--primary-100);
     width: 100%;
     padding: 10px;
     border-radius: 12px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 .category-name {
-    color: #2A428C;
+    color: var(--secondary-950);
     font-size: 14px;
-    font-weight: 600;
+    line-height: 14px;
+    font-weight: 500;
 }
 
 /* Banner/Carousel Styles */
 .hero-banner {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
     position: relative;
     background-image: url(../images/upcoming-bg.png);
     background-size: cover;
     border: 1px solid #A8ACC4;
     padding: 16px;
+    margin-bottom: 34px;
+}
+
+.carousel-item::before {
+    position: absolute;
+    content: " ";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 12px;
+}
+
+.banner-slide-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .banner-img {
     width: 100%;
-    border-radius: 12px;
+    height: 188px;
+    object-fit: fill;
     display: block;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.dot.active {
+.banner-date-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
     background: var(--primary-red);
+    color: white;
+    padding: 3px 8px;
+    border-bottom-right-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.banner-info-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 13px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+    font-size: 11px;
+    color: var(--white);
+}
+
+/* Bootstrap Carousel Customization */
+.carousel-indicators {
+    margin-bottom: 0;
+    bottom: 0px;
+    position: relative;
+    margin-top: 12px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 50%;
+    background-color: var(--primary-200);
+    border: none;
+    margin: 0 4px;
+    opacity: 1;
+}
+
+.carousel-indicators .active {
+    background-color: var(--secondary-950);
 }
 
 /* Events Styles */
