@@ -40,32 +40,6 @@ body {
     flex-direction: column;
 }
 
-/* Splash Page Styles */
-.splash-container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.logo-container {
-    margin-bottom: 40px;
-}
-
-.logo-img {
-    width: 280px;
-    height: auto;
-}
-
-.splash-title {
-    font-size: 29.09px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.splash-subtitle {
-    font-size: 14px;
-}
-
 /* Header Styles */
 .header {
     display: flex;
@@ -157,7 +131,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    background-image: url(../images/upcoming-bg.png);
+    background-image: url(../images/upcoming-bg.jpeg);
     background-size: cover;
     border: 1px solid #A8ACC4;
     padding: 16px;
@@ -295,6 +269,7 @@ body {
     left: 0;
     right: 0;
     padding: 8px 12px;
+    color: var(--white);
     z-index: 3;
     font-weight: 600;
     font-size: 13px;
